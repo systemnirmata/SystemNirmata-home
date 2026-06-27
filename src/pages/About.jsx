@@ -86,7 +86,7 @@ export default function About() {
           </div>
 
           {/* Founder 2 - Asymmetric offset */}
-          <div className="flex flex-col group md:mt-24">
+          <div className="flex flex-col group">
             <div className="aspect-[3/4] w-full bg-surface-container-highest mb-stack-md relative overflow-hidden border-b border-primary/20">
               <img
                 className="object-cover object-top w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-out mix-blend-multiply opacity-90"

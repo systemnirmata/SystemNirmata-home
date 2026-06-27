@@ -300,6 +300,20 @@ export default function Contact() {
                 </div>
               </div>
 
+    
+                <div className="flex items-center space-x-4">
+                  <span className="material-symbols-outlined text-on-tertiary-container font-light">
+                    call
+                  </span>
+                  <a
+                    className="font-body-md text-primary hover:text-on-tertiary-container transition-colors"
+                    href="tel:+917777967903"
+                  >
+                    +91 9898507211
+                  </a>
+                </div>
+            
+
               <div>
                 <div className="flex items-center space-x-4">
                   <span className="material-symbols-outlined text-on-tertiary-container font-light">
