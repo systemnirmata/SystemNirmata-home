@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00261b;
+  --color-primary-container: #0b3d2e;
+  --color-secondary: #8c4b54;
+  --color-tertiary: #2d1e00;
+  --color-on-tertiary-container: #c09849;
+  --color-background: #fdf9f0;
+  --color-surface: #fdf9f0;
+  --color-surface-container: #f1eee5;
+  --color-surface-container-low: #f7f3ea;
+  --color-surface-container-high: #ece8df;
+  --color-surface-container-highest: #e6e2d9;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1c1c16;
+  --color-on-surface-variant: #414944;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-outline-variant: #c0c8c3;
+  --color-inverse-surface: #31302b;
+  --color-secondary-fixed: #ffd9dc;
+  --color-on-secondary-fixed-variant: #70343d;
+  --color-tertiary-fixed-dim: #ecc06c;
+  --color-primary-fixed-dim: #a0d1bc;
+  --color-error: #ba1a1a;
+
+  --font-headline: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --spacing-margin-page: 5vw;
+  --spacing-gutter: 2rem;
+  --spacing-stack-sm: 1rem;
+  --spacing-stack-md: 2.5rem;
+  --spacing-stack-lg: 5rem;
+  --spacing-section-gap: 10rem;
+}
+
+/* Custom design system utilities and overrides */
+@layer utilities {
+  .hairline-b {
+    border-bottom: 1px solid rgba(201, 160, 80, 0.3);
+  }
+  .hairline-t {
+    border-top: 1px solid rgba(201, 160, 80, 0.3);
+  }
+  .hairline-l {
+    border-left: 1px solid rgba(201, 160, 80, 0.3);
+  }
+  .hairline-r {
+    border-right: 1px solid rgba(201, 160, 80, 0.3);
+  }
+  .hairline-gold-b {
+    border-bottom: 1px solid rgba(201, 160, 80, 0.4);
+  }
+  
+  .input-underline {
+    border: none;
+    border-bottom: 1px solid #c09849;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0.5rem 0;
+  }
+  .input-underline:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #00261b;
+  }
+  .input-error {
+    border-bottom-color: #ba1a1a !important;
+  }
+}
+
+/* Typography styles matching Stitch definitions */
+.font-headline-xl {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 768px) {
+  .font-headline-xl {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+.font-headline-lg {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .font-headline-lg {
+    font-size: 32px;
+  }
+}
+
+.font-headline-md {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+@media (max-width: 768px) {
+  .font-headline-md {
+    font-size: 24px;
+  }
+}
+
+.font-body-lg {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.font-body-md {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.font-label-caps {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.15em;
+}
+
+.font-label-italic {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Custom cursor setup */
+body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, [role^=button], .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img,  ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon, body .custom-cursor-on-hover {
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAGhElEQVR4AaxVeXCNVxT/3e97S6IjJKQZy1gjaqtSlFBVEWr5QygZpWOZMmVqqyr1h2oZTGmpWjq1lJka/iim9jIZSy0ZaikNWRqDpGki7yXNInl52+3vfi8v3ksiiWnunHOXc84953fPuff7NNTTWrZsOSwyMvIK2cF5Fnklt5jIjUJ1AmDQNxnljJRykNPltHq93rZCiC8I4nvKG4XqBMDAXzKKeUDMaOxccBuLx++AlABBzAoLC+uCRmh1AqD/zi63CxMHL0GopSX6x4xD+5e7E4QUVqs1mvr/TfUB4HmfxZBSGAtmwBgbo6sPQGUMX+DKRaMODQQQlAhVgkYD0UAAz+LxYqpLCL6I0XwNn5PHUfvCfrjHoBfaqLESTneFkQHeg/nkVeRjfK4nCeQt8tIWLVrMjYiIaGt4b0D3QgD8/hgUUc3bI653Iky6VYlHUXaek680Tduu63oGgbzPdb3UQAA8eoArt8eF2aM24L1h6zAzbpWREbPZjISEBPTr31+VJ4SA9jAjSwhkGTMyktuDnVCgyADQrFmzcKZxFjcsIvdVimCWwUuuvBQpjyHWMK4k+vTpg83bf8CYTSfQqvdAdU9MBLGRvJ4Z+ZX+T9MwlBxEWnh4eE+LxXKf0t003kS+QRDfcG2A41hFjFk1rz556pbYQi/ZxYDlJQUKaN6hC7qOmQTNbFVZGkm/q6rv04huC4VRrcOjMSBmFNNnhFlM432UGwtAnRVwuT2YNPhjDO81FZ1b9UZImEDM2yY6B56UAUUuVDX1WnpNmoshH23HqDV76NerdFNUF8gaTxzrdDuxInE/5o7ZgU8n7oIGE9imUdeeYxD1jR6DGfHr0SwqBEM/aIIOsbGI7NaPJ50M6fGbSnAvpNcLKYGYzjHweDxK1sRv4R81IrXrQsfDvBSounZvF4dF47eB79xvw5Fe2CtSDiPa6RgyIxT3ygQO26KQsOU0YuKmKzVA0/aD38FLrTohqscgdGsOTG7j8emAqolfoADsYRlw4MI6mDRfql/tOBLxr03121SNXiJs00PHoKkhuGoX2J8JngrwuhHUYoZPR+K+ZMT37ILp/Gfa0qsMagLwer0buduWZUvDlfuHeABppG3y0M8gfKWAEBozItF5oAV9E0JxIlvgl0eALrizFnKz3CMigQkdgHtnK3A/yQHQltmuCaCwsLAIwBp+QLD/3FpOnWTAYmqKeWM3YWLsQkQ27YAe8VZ0G2HFQZ76Qi6ga4ZZjY5JQmInIK6VxI0j5ci85oIUrIvPsiYAJc/Pz99GdKklDjsOXVYvUEmB16PHYnzsJ+gzPgTtBliwKw24ZWdw4dNX75V4BlPet7nE1f0O5KR4oKqa9+9DqDLTvoAcRP5zuFmKBUpz/NpOPCnKUFMIHXhjSigiXjFj6z0gswQQKgpqNjM9fdgNiA6R+O3Hctgfe8DKGYbpf18jEI2llVcMQUDHbb5VQUHBWc4OapRsPbYQllBp3HRzGxM2/wnklQPPiY0mfLXzuwORLP7FnWUozff6bJl5nbVKz74BIYTiq6jWGO6ZxOFwLOAqP8t2H5cKvkZZmI5vU4I/MNQHUYQVWNQDCCn24OLuMjhKGDXAQkovHuTdVaeHy+VKDlAZ0yAApaWl+VLKWUIIbN/xHZb/dAwOj2FXo1Pfg9ZNgIUM7sxx49Lecrh52asb5hY+QIXzqTq9vaioiFc42CIIgFLZbLbjHNcL1uLUyjl4knae6CkJIHXTu/IDM481t6e5jAvndQcYBEwzc27CZDIryU3VVecaAJQBX8UKZuJneD04sXQqinNTqkB4mOEBkcBM3vasG078fsgBoTbVxlQ8yk+BEIL75a3aTGoFQENpt9unEMRpyX//yRXTAPkUvGOIbw282xFIPVeBu6cqoKl3xg21kSY0PMzj8/Ep//ANwf3zACgr9TQTOcksy8vGtb1rMYmB49tI3D7qQMZlJzSdR6TB80gnuMf5aYaaP6M7xqRaVxcA8GkWMwuzhRBIPbIbHaUNyQccyLrjRl0n98coKbejpMym0u/iFzfdLw8c6wSgDHkpzxHEJTd/p8vnbEDy5WT8lXsdGTnkf8hqDOQA2fX0U1CXmX4ekH3feE4CqV4Alcb7hBA4enkXVh+cgDUHJhjj6spxDWVKbnClTM13nVkGk25SLlJVVxs3CIDT6TzMLBwVQkvSNVOSRlajn6uvq+RCT+K+JNZ/Z23Blew/AAAA///6dXDSAAAABklEQVQDABEQgJZgDlbeAAAAAElFTkSuQmCC") 11 0, pointer !important;
+}
+html, body, body select, body .custom-cursor-default-hover {
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEbElEQVR4AcSWe0wcRRzHv7t3PXqU47iDA2uDQATFQsxZH380bdoGo9X4jJjYaJFYUxqTRmpFWh+NUaGtQP2rwXcLVWlMKWppjyAPI6HepcFAtMWgbWqx1hQ4iKk87thbv7PsUbEe2LR73cw3szu/vfl+Zn4zsycnJSXVAoihrkmR6bqGEC1xcXHJvI96EQCQJGmZ1Wr1OZ3OnGgTaAC6abosy985HI779OeoVNMASkgRhjaTyXSIKdkkHqIhDWBSCeLJlaWwWuJFOkxMyS5CvEeAeZShRQMQDhkpd2JH4RG44lOhqqoAWU8Ij91ud4i4UZoGEAa22EUoK2iC++alYYg8i8Xic7lcWSJuhGYAqCEV6bfZ4Gmvx91rCqEoigDJ4oz4EhMT8wwFCIWArGUWuB+cj8azZqQ+XYHlm7aDyRDpcHBdeJiSDVcbYmoGVCB7lRk3rYxB7c/A0fOATKDs1evxQFUdZItVQIgFWU2Idwhhoq5K0QC45hC7UMa7vcDxYZpLet8ES8nOQ/4HLbC6FgoIESgmRCNlEw9XKg1ApuGBM0D/X6AJZlwSYwsSs1DwUTuW3H6HFpMkaTVvvNwhGayvqGgA9MDoZOR+bJz8591O1O1twIrcfIS4YAixmDvEy5NzeeRfzh3RACK9xgzANR8ozgXMwwq8tUE8c28lD62tCCkiimSz2fw1d0hBpD7mapcjvSDWRdoCYONiYPTMJDprxqAEoBnfs6QIpfkfQ8Y8sU1jZFmu4VlRDkBMJi7n+k8AHgfIdQJFtwDnTwThqxuHqn0qproWcNk3rEJ5YSMSYl0CQmgrF2YD34il/neR//2mwu23NAVYmwmc9gbw/RcTYL4vvqaPUVQueyYhPMhIvjUcf5gz0cnPemq4Ya56BoAwv58/fSQN+LF5Ar1tATR17cbuxiJUH34O73s24sOmYuxp3oy9LSXY17oFBzqrkLkoBybJHPZyMyVerou7wg2z1dMAYlqfuBFYcZ2KroNjOOULoPuUB/s7dqLrZDOO/dIEb99hHP3pK3T0NuDb4/Vo/+FztPXUoaV7PxT14jaSJOl6QnzjdDofn81cxDQAkfPH0gC3XYX3k3H8fkLBn2O/ceQvwCRrh14Nvwebdb3IuoR6iSoV4rbcQtOXqVfY6Wts20btIEROQkJCOma5NACxoeJJ0bFnDP5+hTkPorL+WY5qgvfSwYGBgcLBwcFduqpYV1IVQ0NDb+vayXe2U+XUW4y9Sb1BvT4yMnJ6Fn/uJEYlYvQcCuLCQAgyj8Xa1m046+9jBN3scK24MUq0nuqaf4r45QOO9X2J1p5PxcjP8XP8EKOjlGFlGkA4jFz4FdVHSmAymceZ10f9fn+/aDdSOoBKjwAq6tchpAbFobKOufWx0fCiAUiSjH1tZTg3fBIceRkXz2eGO+sGGoAsmdA/2AtuowaO/FU9FpVKA6CxMBcr/qmouP7DRAPg8x/RWPH0uaQIgHGaR2XFX+LOBgGwgdvNy3tDylyd/g0AAP//XzM9UQAAAAZJREFUAwAOdbDn3ixvhQAAAABJRU5ErkJggg==") 0 0, auto !important;
+}
+
+/* Material symbols config */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
