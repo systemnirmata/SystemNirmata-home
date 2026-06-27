@@ -71,7 +71,7 @@ export default function About() {
               <img
                 className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-out mix-blend-multiply opacity-90"
                 alt="Aadhar Brahmbhatt Portrait"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWyzQGuWyMt9EfFHRIqG0inqLkoR15BfBDVO1Mpj4eGg7G5SzEedsW7jVoPhdcaPLGPmFWDqG4PJuDwGHFl-Cbi0GUBEFC79hP5nXwJYNK4rXkKOWGmLflxbzF5mWbwrCIvE7xHXTZtVMfNiQMoEyz1_2SJspIFjJDu1DRl3zrrg3m3CkDSY597VnUj65kkvWk1KcKOpYxgZWaqmjWp5Acl4IdnbwgDnhp1mTBIHGP4FQxwuCVVI04Rbc8VbGKl_ZpLIT9JljJzQ"
+                src="/aadhar.jpg"
               />
             </div>
             <div className="flex justify-between items-baseline mb-4 border-b border-on-tertiary-container/40 pb-4">
@@ -89,9 +89,9 @@ export default function About() {
           <div className="flex flex-col group md:mt-24">
             <div className="aspect-[3/4] w-full bg-surface-container-highest mb-stack-md relative overflow-hidden border-b border-primary/20">
               <img
-                className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-out mix-blend-multiply opacity-90"
+                className="object-cover object-top w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 ease-out mix-blend-multiply opacity-90"
                 alt="Nagar Divya Portrait"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXDbpflBIWSde4c7Cemk1m-ygXj0xVYKOo6M5gdHnPhXIbobC4PNNBK-dNgRTVGD3_28oBkT6z48dw-1To4fkb7WbRTQ3MTj-Uuo4kpwhFb0QjqcU6_q-N1kSckEAP1eauLqsUtPnF6KDePJDJQ3AjoBnoKE4uqtSO3D90aKGDjyz1SMP1IzMuVhgStjeJ0pXxu3SOfoThMca_Y757d8VFolZrj_iKOQMS8DAlC4SLeRKzw_D9s_AiIynx6mX-sIV7wtRc1U2P7Q"
+                src="/divyaa.png"
               />
             </div>
             <div className="flex justify-between items-baseline mb-4 border-b border-on-tertiary-container/40 pb-4">

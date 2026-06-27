@@ -4,21 +4,22 @@ export default function Work() {
   const fallbackProjects = [
     {
       id: 1,
-      title: 'Smart Shop Inventory System',
-      category: 'Websites',
-      image_url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200'
+      title: 'HealthGuard',
+      category: 'AI Chat Agents',
+      image_url: '/HealthGurad.png'
     },
     {
       id: 2,
-      title: 'Vanguard AI Call Agent',
-      category: 'AI Agents',
-      image_url: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200'
-    },
-    {
-      id: 3,
       title: 'Apex AI Chatbot',
       category: 'AI Agents',
       image_url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'
+    },
+
+    {
+      id: 3,
+      title: 'Smart Shop ',
+      category: 'Websites',
+      image_url: '/gangadhar.png'
     },
     {
       id: 4,
@@ -73,11 +74,10 @@ export default function Work() {
             <button
               key={filter}
               onClick={() => filterProjects(filter)}
-              className={`font-label-caps text-label-caps uppercase tracking-widest cursor-pointer pb-1 transition-colors duration-300 ${
-                activeFilter === filter
-                  ? 'text-primary border-b border-on-tertiary-container'
-                  : 'text-on-surface-variant hover:text-primary'
-              }`}
+              className={`font-label-caps text-label-caps uppercase tracking-widest cursor-pointer pb-1 transition-colors duration-300 ${activeFilter === filter
+                ? 'text-primary border-b border-on-tertiary-container'
+                : 'text-on-surface-variant hover:text-primary'
+                }`}
             >
               {filter}
             </button>

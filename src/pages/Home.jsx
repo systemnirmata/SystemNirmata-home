@@ -4,15 +4,15 @@ export default function Home({ setActivePage }) {
   const [projects] = useState([
     {
       id: 1,
-      title: 'Aura Financial',
+      title: 'Smart Store',
       category: 'Web Architecture',
-      image_url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDCZ8tbEK1vVAaSMyTpxDs5FHMTERqbnXvmHdD8kdtNCGVrSMiPqf2ZLMYLu48W1Pl73l26KZ9G3J-yibKIF9w-DBgMD-Qy2laTsfnme64tujnrgddjq4hpvRQyCSKJvl_Or4No_0OZ8p79XSkQILELKUor_U3yltqF14iEKdhYdaFODNOzfY77UL7O4fAkfJqZun5GxD41djALCEzhE9gUhXGr85YUX_mb0x8RTgeKos2JncBche_29_fjZHjxV-SIgBztJE7QbQ'
+      image_url: '/gangadhar.png'
     },
     {
       id: 2,
-      title: 'Veritas Legal AI',
-      category: 'AI Voice Agents',
-      image_url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-gyIQTyCvF9BmmJU7FQZbK_-FxGrM-p24jqPsdO74eXPd6KZ2BTCERT_0wrHrAWVP8YBbIWq1wk7FucBRwZffIYigIVEovIF0aZBeGhfYr-gFXq_KuNw1F3-KrxjljvaABrA2Sx_xauBe8kZwnswBpAt-DE8vsgr3m00MF0XS-DpdHu1NkL7TC7kQa2hZmw8c39JIW8HafqXH2-Nx1RUwPLLQTEdPVeTJnub1wloTVHDlPv3p-uC44S1EAugtr64doNRuy-7R7g'
+      title: 'HealthGuard',
+      category: 'AI Chat Agents',
+      image_url: '/HealthGurad.png'
     }
   ]);
 
