@@ -8,11 +8,11 @@ export default function Services() {
         'We build robust, scalable web architectures tailored to your specific operational needs. Our approach ensures clean codebases and seamless deployment pipelines.',
       bullets: [
         'Custom Full-Stack Solutions',
-        'High-Performance Front-End Frameworks',
+        'High-Performance Frameworks',
         'Automated CI/CD Pipelines'
       ],
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuCQcoLYf8I93B4vS2pyzFJKIkyGlvUqYZj4ybNciQzs4ktDd6Q2nu9HA-0KwrkPHPwuCp63fU3otvtCYS6FN6TZbYyTNnHfCHyKVVLEqOIw_lnnEDMCjs__qYBJyfz75cn_Z76SzgL8zoUdmmJYHj91jk1O6A8O70CU6z_fTybv6jFMYbuyCvL8ubn6y575MXVI125XPvWcfv9psNG4lIzdDDoxz79C58QlA2yHV22gETlzpNwNuclWQMS1GNCKcqKGXO7WGcroKA'
+        '/webDevelopment.png'
     },
     {
       num: '02.',
@@ -40,7 +40,7 @@ export default function Services() {
         'Advanced Sentiment Analysis'
       ],
       image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAcfx4PgqMv4LCtXd9KU6pgM0UzFrN8zcORILP48h-dr6vRLdTtrC8aiJ2RuyVEvB_JuZNwt54-76CpI6E-VQNR_9Q32XuQ0BdYdyPnMA0aCnTXIR95N0j5WWSh-zv84Ro702A1U6gFXz_2a3dhTe_Z-makMQltLU1MTC6EPaWl-wv6VxF5HppsZh8AaHdW1V8gxmgaNplyswXHMSlRjnMBeUVudynslbEjQZAP_H_eI4AwYkar9gFd1IYi-lSIj_2aQJG0nofgGg'
+        '/ai_chatbot.png'
     },
     {
       num: '04.',
@@ -83,12 +83,11 @@ export default function Services() {
             >
               {/* Image Column */}
               <div
-                className={`col-span-12 md:col-span-6 relative h-[450px] w-full border border-outline-variant/35 ${
-                  isEven ? 'order-1' : 'order-1 md:order-2 md:col-start-7'
-                }`}
+                className={`col-span-12 md:col-span-6 relative h-[450px] w-full border border-outline-variant/35 ${isEven ? 'order-1' : 'order-1 md:order-2 md:col-start-7'
+                  }`}
               >
                 <img
-                  className="object-cover w-full h-full grayscale-[20%] sepia-[10%] brightness-90"
+                  className="object-bottom w-full h-full grayscale-[20%] sepia-[10%] brightness-90"
                   alt={service.title}
                   src={service.image}
                 />
@@ -97,9 +96,8 @@ export default function Services() {
 
               {/* Text Column */}
               <div
-                className={`col-span-12 md:col-span-5 flex flex-col justify-center py-stack-sm ${
-                  isEven ? 'md:col-start-8 order-2' : 'order-2 md:order-1'
-                }`}
+                className={`col-span-12 md:col-span-5 flex flex-col justify-center py-stack-sm ${isEven ? 'md:col-start-8 order-2' : 'order-2 md:order-1'
+                  }`}
               >
                 <span className="font-label-italic text-label-italic text-on-tertiary-container mb-stack-sm italic">
                   {service.num} {service.category}
